@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Звіт Udemy — Оттіско Олег</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+    }
+    header {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    header h2 {
+      margin-top: 8px;
+      font-weight: 400;
+      font-size: 18px;
+      color: #555;
+    }
+    .container {
+      display: flex;
+      padding: 30px;
+      gap: 30px;
+    }
+    .sidebar {
+      flex: 1;
+      max-width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .sidebar button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: 0.2s;
+      text-align: left;
+      font-size: 15px;
+    }
+    .sidebar button:hover {
+      background-color: #e6f0ff;
+    }
+    .content {
+      flex: 3;
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .profile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+    h3 {
+      font-size: 20px;
+      color: #003366;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ЗВІТ</h1>
+  <h2>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. ОСНОВИ FRONTEND ТА BACKEND РОЗРОБОК»</h2>
+</header>
+
+<div class="container">
+  <div class="sidebar">
+    <button onclick="showSection('course')">Назва курсу</button>
+    <button onclick="showSection('repos')">Репозиторії</button>
+    <button onclick="showSection('cert')">Сертифікат</button>
+    <button onclick="showSection('content')">Зміст курсу</button>
+    <button onclick="showSection('tests')">Тестування</button>
+    <button onclick="showSection('conclusion')">Висновки</button>
+  </div>
+
+  <div class="content">
+    <div class="profile">
+      <div>
+        <p><strong>Студент:</strong> Оттіско Олег</p>
+        <p><strong>Група:</strong> ІМ-24</p>
+        <p><strong>Викладач:</strong> Світлана Проскура</p>
+      </div>
+      <img src="img_8.jpg" alt="Фото студента">
+    </div>
+
+    <div id="course" class="section active">
+      <h3>Назва курсу</h3>
+      <p><a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">The Complete Full-Stack Web Development Bootcamp</a></p>
+    </div>
+
+    <div id="repos" class="section">
+      <h3>Репозиторії</h3>
+      <ul>
+        <li><a href="https://github.com/OlehOttisko/WebDevBootcampProject">WebDevBootcampProject</a></li>
+        <li><a href="https://github.com/OlehOttisko/WebDevBootcamp">WebDevelopmentBootcamp</a></li>
+      </ul>
+    </div>
+
+    <div id="cert" class="section">
+      <h3>Сертифікат</h3>
+      <img src="img.png" alt="Сертифікат" style="max-width: 60%; margin-top: 10px;">
+    </div>
+
+    <div id="content" class="section">
+      <h3>Зміст курсу</h3>
+      <ul>
+        <li>Front-End: HTML, CSS, Flexbox, Grid, Bootstrap</li>
+        <li>JavaScript: ES6, DOM, jQuery, Advanced Techniques</li>
+        <li>Проєкти: Capstone Projects, Dicee Game, Simon Game</li>
+        <li>Backend: Node.js, Express.js, EJS, APIs, SQL, PostgreSQL</li>
+        <li>React.js</li>
+        <li>Web3: DApps, DBANK, Crypto, NFT</li>
+        <li>Git, GitHub, Security</li>
+      </ul>
+    </div>
+
+    <div id="tests" class="section">
+      <h3>Тестування</h3>
+      <h4>Quiz</h4>
+      <img src="img_1.png" alt="quiz1">
+      <h4>Challenge</h4>
+      <img src="img_2.png" alt="quiz2">
+      <h4>Quiz</h4>
+      <img src="img_3.png" alt="quiz3">
+      <h4>Quiz</h4>
+      <img src="img_4.png" alt="quiz4">
+      <h4>Challenge</h4>
+      <img src="img_5.png" alt="quiz5">
+      <h4>Challenge</h4>
+      <img src="img_6.png" alt="quiz6">
+      <h4>Challenge</h4>
+      <img src="img_7.png" alt="quiz7">
+    </div>
+
+    <div id="conclusion" class="section">
+      <h3>Висновки</h3>
+      <p>Успішно завершено курс, який охоплює повний цикл веброзробки. Практичні проєкти реалізовані у відповідних репозиторіях. Отримано сертифікат. Курс навчив знанням з повного стеку.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
